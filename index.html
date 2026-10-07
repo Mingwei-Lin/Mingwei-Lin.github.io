@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mingwei Lin | LSE</title>
+<meta name="description" content="Mingwei Lin, LSE Fellow in Statistics at the London School of Economics.">
+<meta name="author" content="Mingwei Lin">
+<link rel="canonical" href="https://mingwei-lin.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Mingwei Lin | LSE">
+<meta property="og:description" content="LSE Fellow in Statistics at the London School of Economics.">
+<meta property="og:url" content="https://mingwei-lin.github.io/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mingwei Lin",
+  "url": "https://mingwei-lin.github.io/",
+  "jobTitle": "LSE Fellow in Statistics",
+  "affiliation": { "@type": "CollegeOrUniversity", "name": "London School of Economics and Political Science", "url": "https://www.lse.ac.uk" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "London School of Economics and Political Science" },
+    { "@type": "CollegeOrUniversity", "name": "Imperial College London" }
+  ],
+  "knowsAbout": ["Market microstructure", "Limit order markets", "Asymmetric information", "Price discovery", "Statistical learning", "Bayesian methods"]
+}
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sr-only" id="seo-summary"></div>
+<noscript>
+  <p><strong>Mingwei Lin</strong>, LSE Fellow in Statistics, London School of Economics.</p>
+  <p>Research on limit order markets, asymmetric information, price discovery and Bayesian statistical learning.</p>
+  <p>This site is an interactive terminal; please enable JavaScript to use it.</p>
+</noscript>
+
+<!-- ============ TERMINAL MODE ============ -->
+<div id="terminal-mode">
+  <div class="term-window">
+    <div class="term-titlebar">
+      <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+      <span class="term-title">mingwei@lse — zsh</span>
+      <button class="mode-btn" onclick="switchMode('gui')">⬚ normal view</button>
+    </div>
+    <div class="term-body" id="term-body" onclick="focusInput()">
+      <div id="term-output"></div>
+      <form class="term-input-line" id="term-form">
+        <span class="prompt">visitor@mingwei:~$</span>
+        <input id="term-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus
+               placeholder="type 'help', or just ask — e.g. 'what do you research?'">
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ============ GUI MODE ============ -->
+<div id="gui-mode" hidden>
+  <nav class="gui-nav">
+    <span class="gui-brand">ml<span class="brand-cursor">▍</span></span>
+    <div class="gui-nav-links">
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#notes">Notes</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="mode-btn gui-switch" onclick="switchMode('terminal')">&gt;_ terminal</button>
+  </nav>
+
+  <header class="gui-hero">
+    <div class="gui-hero-inner">
+      <div class="hero-photo">
+        <img id="hero-img" src="photo.jpg" alt="Portrait of Mingwei Lin"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'hero-photo-placeholder',textContent:'ML'}))">
+      </div>
+      <div class="hero-text">
+        <p class="hero-kicker">$ whoami</p>
+        <h1 id="hero-name"></h1>
+        <p class="hero-tagline" id="hero-tagline"></p>
+        <div id="hero-intro" class="hero-intro"></div>
+        <div class="hero-chips" id="hero-chips"></div>
+        <div class="hero-links" id="hero-links"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="gui-main">
+
+    <section id="research">
+      <h2><span class="sec-hash">#</span> Research</h2>
+      <div id="gui-pubs"></div>
+      <h3 class="sub-h">Talks</h3>
+      <div id="gui-talks"></div>
+    </section>
+
+
+    <section id="teaching">
+      <h2><span class="sec-hash">#</span> Teaching</h2>
+      <div id="gui-teaching"></div>
+    </section>
+
+    <section id="notes">
+      <h2><span class="sec-hash">#</span> Notes</h2>
+      <div id="gui-posts"></div>
+    </section>
+
+    <section id="contact">
+      <h2><span class="sec-hash">#</span> Contact</h2>
+      <div id="gui-contact"></div>
+    </section>
+  </main>
+  <footer class="gui-footer">
+    © <span id="year"></span> Mingwei Lin · <a href="#" onclick="switchMode('terminal');return false;">&gt;_ switch to terminal</a>
+    <div class="gui-updated" id="gui-updated"></div>
+  </footer>
+</div>
+
+<script src="content.js"></script>
+<script src="terminal.js"></script>
+</body>
+</html>

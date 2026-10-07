@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mingwei-lin.github.io/sitemap.xml
